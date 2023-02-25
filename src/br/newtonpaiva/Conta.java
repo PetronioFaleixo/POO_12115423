@@ -1,7 +1,7 @@
 package br.newtonpaiva;
 
 public class Conta {
-    private Integer numero;-
+    private Integer numero;
     private Double saldo;
 
     public Double sacar(Double valor){
@@ -9,7 +9,10 @@ public class Conta {
     }
 
     public Double depositar(Double valor){
-        return null;
+        if(valor == null || valor <= 0)
+        throw new IllegalArgumentException("Valor menor ou igual a zero");
+        saldo += valor;
+        return saldo;
     }
 
     public Integer getNumero(){
@@ -20,12 +23,14 @@ public class Conta {
         this.numero = numero;
         if(numero == null || numero < 0)
             throw new IllegalArgumentException(("eu desisto de java, e muito chato"));
-        if(numero % 2 == 0 ) {
-            throw new IllegalArgumentException(("Numero e Par"));
-        }
-        else{
-            throw new IllegalArgumentException(("Numero impar"));
-        }
 
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
     }
 }
