@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9723a46f-abcf-4741-9af1-d23434d8be7c" name="Changes" comment="Aula_1 partial commit">
+    <list default="true" id="9723a46f-abcf-4741-9af1-d23434d8be7c" name="Changes" comment="Aula_2 partial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/newtonpaiva/Conta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/newtonpaiva/Conta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/newtonpaiva/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/newtonpaiva/Main.java" afterDir="false" />
@@ -82,7 +82,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677281159115</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Aula_2 partial commit">
+      <created>1677890683597</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677890683597</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -98,6 +105,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Aula_1 partial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aula_1 partial commit" />
+    <MESSAGE value="Aula_2 partial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aula_2 partial commit" />
   </component>
 </project>
