@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Conta {
     private Integer numero;
-    private Double saldo;
+    protected Double saldo;
 
     public Conta(){
         this(null,null);
