@@ -1,18 +1,28 @@
 package br.newtonpaiva;
 
-public class Pessoa {
+import java.util.List;
+import java.util.LinkedList;
+import java.util.List;
 
-    protected String nome;
+import java.util.LinkedList;
+import java.util.List;
 
-    public String getNome(){
-        return nome;
+public abstract class Pessoa {
+    private String nome;
+    private List<Conta> contas = new LinkedList<>();
+
+
+    public abstract void validarDocumento();
+
+    public Pessoa(List<Conta> contas) {
+        this.contas = contas;
     }
 
-    public void setNome(){
-        this.nome = nome;
+    public List<Conta> getContas() {
+        return contas;
     }
 
-    public void validarDocumento(){
+    public void setContas(List<Conta> contas) {
+        this.contas = contas;
     }
-
 }

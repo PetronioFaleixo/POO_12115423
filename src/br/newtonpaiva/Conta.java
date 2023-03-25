@@ -2,57 +2,75 @@ package br.newtonpaiva;
 
 import java.util.Objects;
 
-public class Conta {
-    private Integer numero;
-    protected Double saldo;
+import java.util.Objects;
 
-    public Conta(){
-        this(null,null);
+public class Conta implements ITransferencia {
+    private Integer numero;
+    private Double saldo;
+
+    private Pessoa pessoa;
+
+    public Conta() {
+        this(null);
     }
-    public Conta(Integer numero){
+
+    public Conta(Integer numero) {
         this(numero, 0.0);
-        this.numero = numero;
-        this.saldo = 0.0;
     }
-    public  Conta(Integer numero, Double saldo){
+
+    public Conta(Integer numero, Double saldo) {
         this.numero = numero;
         this.saldo = saldo;
     }
-    public Double sacar(Double valor){
-     return null;
+
+    public Double sacar(Double valor) {
+        return 0.0;
     }
-    public Double depositar(Double valor){
-        if(valor == null || valor <= 0)
-        throw new IllegalArgumentException("Valor menor ou igual a zero");
+
+    public Double depositar(Double valor) {
+        if(valor == null || valor <= 0 )
+            throw new IllegalArgumentException("Valor menor ou");
+
         saldo += valor;
         return saldo;
     }
 
     public void transferir(Conta destino, Double valor) {
-        if(this.getSaldo() < valor) {
-            throw new IllegalArgumentException("Saldo Insuficiente");
-        }
-        if (this.equals(destino)) {
-            throw new IllegalArgumentException("Mesmo destino");
-        }
+        if(this.getSaldo() < valor)
+            throw new IllegalArgumentException("");
+
+        if(this.equals(destino))
+            throw new IllegalArgumentException("");
+
+
         this.sacar(valor);
         destino.depositar(valor);
     }
-    public Integer getNumero(){
-        return  numero;
+
+    public Integer getNumero() {
+        return numero;
     }
+
     public void setNumero(Integer numero) {
         this.numero = numero;
-        if(numero == null || numero < 0)
-            throw new IllegalArgumentException(("eu desisto de java, e muito chato"));
-
     }
+
     public Double getSaldo() {
         return saldo;
     }
+
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -60,6 +78,7 @@ public class Conta {
         Conta conta = (Conta) o;
         return Objects.equals(numero, conta.numero);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(numero);
